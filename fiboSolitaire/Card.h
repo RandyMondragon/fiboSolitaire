@@ -1,6 +1,7 @@
 #ifndef CARD_H
 #define CARD_H
 
+
 class Card {
 
 private: 
@@ -14,6 +15,8 @@ public:
 	int getValue(); // return point value of card
 					// A = 1, 2-10, J,Q,K = 10
 	void display(); //display card using 2 fields AS, 10D, QH
+
+
 };
 
 #endif
