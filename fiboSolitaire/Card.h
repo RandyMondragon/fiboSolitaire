@@ -4,8 +4,8 @@
 class Card {
 
 private: 
-	char rank;
-	char suit;
+	char m_rank;
+	char m_suit;
 
 public:
 	Card(); // create default card
