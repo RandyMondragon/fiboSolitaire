@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Card.h"
+#include "Deck.h"
 
 void printMenu() {
 
@@ -15,17 +15,30 @@ void printMenu() {
 
 int main() {
 
+	int menuChoice{ 0 };
 
-	Card testCard('3', 'C');
-
-	//testCard.display();
-
-	int menuChoice{};
+	Deck testDeck{};
 
 	do
 	{
 		printMenu();
 		std::cin >> menuChoice;
+
+		switch (menuChoice)
+		{
+		case 1: {
+			Deck newDeck{};
+			testDeck = newDeck;
+			break;
+		}
+		case 2:
+			testDeck.display();
+			break;
+		case 3:
+			testDeck.shuffle();
+		default:
+			break;
+		}
 
 	} while (menuChoice != 5);
 
