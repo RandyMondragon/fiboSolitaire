@@ -1,9 +1,10 @@
 #include "Card.h"
-
+#include <iostream>
 
 // creates a default card which will be Ace of Spades
 Card::Card() {
 	m_rank = { 'A' };
+	m_suit = { 'S' };
 }
 
 // constructor setting rank r and suit s
@@ -59,3 +60,8 @@ int Card::getValue() {
 
 }
 
+void Card::display() {
+
+	std::cout << m_rank << m_suit << ", ";
+
+}
