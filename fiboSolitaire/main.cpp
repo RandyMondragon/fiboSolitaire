@@ -3,8 +3,6 @@
 
 void printMenu() {
 
-	std::cout << "Welcome to Fibonacci Solitaire!\n";
-
 	std::cout << "1) New Deck\n";
 	std::cout << "2) Display Deck\n";
 	std::cout << "3) Shuffle Deck\n";
@@ -15,9 +13,14 @@ void printMenu() {
 
 int main() {
 
+	// seed the random number generator
+	srand(time(0));
+
 	int menuChoice{ 0 };
 
 	Deck testDeck{};
+
+	std::cout << "Welcome to Fibonacci Solitaire!\n";
 
 	do
 	{

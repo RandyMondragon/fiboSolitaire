@@ -95,10 +95,16 @@ void Deck::refreshDeck() {
 
 void Deck::shuffle() {
 
-	m_deck[12] = Card{ '2', 'C' };
-	m_deck[16] = Card{ '5', 'S' };
-	m_deck[22] = Card{ '5', 'H' };
-	m_deck[42] = Card{ 'T', 'A' };
+	for (int i = 0; i < 100; ++i) {
+
+		int rand1 = rand() % 52;
+		int rand2 = rand() % 52;
+
+		std::swap(m_deck[rand1], m_deck[rand2]);
+
+	}
+
+	std::cout << "Deck has been shuffled\n";
 
 
 }
