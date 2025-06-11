@@ -1,6 +1,12 @@
 #include <iostream>
 #include "Deck.h"
 
+void playSolitaire() {
+
+	std::cout << "Playinfg Fibonacci Solitaire";
+
+}
+
 void printMenu() {
 
 	std::cout << "1) New Deck\n";
@@ -39,6 +45,11 @@ int main() {
 			break;
 		case 3:
 			testDeck.shuffle();
+		case 4:
+			break;
+		case 5:
+			menuChoice = 5;
+			break;
 		default:
 			break;
 		}
