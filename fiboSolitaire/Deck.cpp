@@ -65,7 +65,25 @@ Deck::Deck() {
 
 		for (int j = 0; j < 13; ++j) {
 
-			m_deck[index] = Card{ getRankChar(j), getSuitChar(i)};
+			m_deck[index].setCard(getRankChar(j), getSuitChar(i));
+
+			++index;
+
+		}
+
+	}
+
+}
+
+void Deck::refreshDeck() {
+
+	int index = 0;
+
+	for (int i = 0; i < 4; ++i) {
+
+		for (int j = 0; j < 13; ++j) {
+
+			m_deck[index].setCard(getRankChar(j), getSuitChar(i));
 
 			++index;
 
