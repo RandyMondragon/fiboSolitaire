@@ -6,6 +6,9 @@
 // will use this to see if the total is here or not
 const int FIBO_NUMS[12] = { 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233 };
 
+//global bool to test game win since it is so rare
+bool gameWon = false;
+
 // returns true if f is in FIBO_NUMS
 // else false
 bool checkFibo(int f) {
@@ -21,6 +24,7 @@ bool checkFibo(int f) {
 
 }
 
+// function dealing the top card, checking if piles equate to a fibo number and ultimately if the game is won and printing it all out
 void playSolitaire(Deck& deck) {
 
 	std::cout << "Playing Fibonacci Solitaire !!!\n\n";
@@ -51,13 +55,33 @@ void playSolitaire(Deck& deck) {
 	// lead to a fibo total meaning a winning game
 	if (fibo == 0) {
 		std::cout << "Winner in " << piles << " piles!\n\n";
+		gameWon = true;
 	}
 	else {
+		// if the last pile never matches a fibo number the pile is never incremented
+		// we increment here
+		piles++;
 		std::cout << "\nLast hand value: " << fibo << "\n" << "Loser in " << piles << " piles!\n\n";
 	}
 
 }
 
+// test version of game looping until game won to check if it works
+void testSolitaire(Deck& deck) {
+
+	int gamesPlayed = 0;
+
+	while (!gameWon) {
+		deck.shuffle();
+		playSolitaire(deck);
+		deck.refreshDeck();
+		gamesPlayed++;
+	}
+
+	std::cout << "games played: " << gamesPlayed << "\n\n";
+}
+
+// prints the menu to keep main function clean
 void printMenu() {
 
 	std::cout << "1) New Deck\n";
@@ -99,10 +123,16 @@ int main() {
 			testDeck.shuffle();
 			break;
 		case 4:
+		{
 			playSolitaire(testDeck);
 			// refresh the deck after playing
 			testDeck.refreshDeck();
+
+			//testSolitaire(testDeck);
+
 			break;
+		}
+			
 		case 5:
 			menuChoice = 5;
 			std::cout << "Thank you for playing!\n";
