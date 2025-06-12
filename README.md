@@ -1,4 +1,4 @@
-# 🃏 Fibonacci Solitaire
+# Fibonacci Solitaire
 
 Welcome to **Fibonacci Solitaire** – a fun twist on a card game that blends simple math with luck and logic! This C++ project simulates a game using a standard deck of 52 playing cards, following unique rules based on Fibonacci numbers.
 
@@ -28,26 +28,26 @@ If the last pile **is not** a Fibonacci number → you **lose**.
 
 This project was built as part of a C++ learning exercise. Key concepts applied include:
 
-- ✅ Creating and using **classes** (`Card`, `Deck`)
-- ✅ Working with **arrays** and **array of objects**
-- ✅ Splitting code into **header (`.h`) and source (`.cpp`) files**
-- ✅ Implementing **default constructors**
-- ✅ Using the **`rand()` function** to shuffle the deck
-- ✅ Generating **random numbers within a range**
+-  Creating and using **classes** (`Card`, `Deck`)
+-  Working with **arrays** and **array of objects**
+-  Splitting code into **header (`.h`) and source (`.cpp`) files**
+-  Implementing **default constructors**
+-  Using the **`rand()` function** to shuffle the deck
+-  Generating **random numbers within a range**
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
-### 🏆 Winning Game
+### Winning Game
 ![Winning Game](images/winner.png)
 
-### 💀 Losing Game
+### Losing Game
 ![Losing Game](images/loser.png)
 
 ---
 
-## ⚙️ How to Compile & Run
+## How to Compile & Run
 
 To compile the program (using `g++` or Visual Studio):
 
