@@ -36,8 +36,7 @@ int main() {
 		switch (menuChoice)
 		{
 		case 1: {
-			Deck newDeck{};
-			testDeck = newDeck;
+			testDeck.refreshDeck();
 			break;
 		}
 		case 2:

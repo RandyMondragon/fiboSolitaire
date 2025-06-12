@@ -5,7 +5,7 @@
 class Deck {
 private:
 	Card m_deck[52];
-	int topCard{ 0 };
+	int m_topCard{ 0 };
 public:
 	Deck(); //  constructor creates a deck of 52 cards
 	void refreshDeck(); // reset the deck so it looks like a new deck

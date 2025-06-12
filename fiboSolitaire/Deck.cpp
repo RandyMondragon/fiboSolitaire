@@ -77,19 +77,21 @@ Deck::Deck() {
 
 void Deck::refreshDeck() {
 
-	int index = 0;
+	//int index = 0;
 
-	for (int i = 0; i < 4; ++i) {
+	//for (int i = 0; i < 4; ++i) {
 
-		for (int j = 0; j < 13; ++j) {
+	//	for (int j = 0; j < 13; ++j) {
 
-			m_deck[index].setCard(getRankChar(j), getSuitChar(i));
+	//		m_deck[index].setCard(getRankChar(j), getSuitChar(i));
 
-			++index;
+	//		++index;
 
-		}
+	//	}
 
-	}
+	//}
+
+	*this = {};
 
 }
 
