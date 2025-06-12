@@ -44,7 +44,15 @@ int main() {
 			break;
 		case 3:
 			testDeck.shuffle();
+			break;
 		case 4:
+			for (int i = 0; i < 52; ++i) {
+
+				std::cout << "For loop i[" << i << "] = ";
+				testDeck.deal().display();
+				std::cout << '\n';
+
+			}
 			break;
 		case 5:
 			menuChoice = 5;

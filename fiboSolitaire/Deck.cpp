@@ -77,20 +77,6 @@ Deck::Deck() {
 
 void Deck::refreshDeck() {
 
-	//int index = 0;
-
-	//for (int i = 0; i < 4; ++i) {
-
-	//	for (int j = 0; j < 13; ++j) {
-
-	//		m_deck[index].setCard(getRankChar(j), getSuitChar(i));
-
-	//		++index;
-
-	//	}
-
-	//}
-
 	*this = {};
 
 }
@@ -130,4 +116,23 @@ void Deck::display() {
 
 	std::cout << '\n';
 
+}
+
+// ++ is after m_topCard to increment it after the card
+// has already been returned for the next call
+Card Deck::deal() {
+
+	return(m_deck[m_topCard++]);
+
+}
+
+// if m_topCard is the last card (51) we have reached the end of the deck
+bool Deck::isEmpty() {
+
+	if (m_topCard == 51) {
+
+		return true;
+
+	}
+	else return false;
 }
