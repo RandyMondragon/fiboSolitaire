@@ -92,7 +92,7 @@ void Deck::shuffle() {
 
 	}
 
-	std::cout << "Deck has been shuffled\n";
+	std::cout << "Deck has been shuffled!\n\n";
 
 
 }
@@ -129,7 +129,7 @@ Card Deck::deal() {
 // if m_topCard is the last card (51) we have reached the end of the deck
 bool Deck::isEmpty() {
 
-	if (m_topCard == 51) {
+	if (m_topCard == 52) {
 
 		return true;
 
